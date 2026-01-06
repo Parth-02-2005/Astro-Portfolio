@@ -1,0 +1,30 @@
+---
+const projects = [
+  {
+    title: "Green Cart",
+    desc: "Full-stack e-commerce app with Razorpay & admin panel",
+    link: "https://greencart-frontend-rouge.vercel.app/"
+  },
+  {
+    title: "SyncCard",
+    desc: "Smart digital business card using MERN & NFC",
+    link: "#"
+  }
+];
+---
+
+<section id="projects" class="py-20">
+  <h2 class="text-3xl font-bold mb-10">Projects</h2>
+
+  <div class="grid md:grid-cols-2 gap-8">
+    {projects.map(p => (
+      <div class="border border-gray-800 rounded-xl p-6 hover:border-teal-400">
+        <h3 class="text-xl font-semibold">{p.title}</h3>
+        <p class="mt-2 text-gray-400">{p.desc}</p>
+        <a href={p.link} class="text-teal-400 mt-4 inline-block">
+          Live Demo →
+        </a>
+      </div>
+    ))}
+  </div>
+</section>
